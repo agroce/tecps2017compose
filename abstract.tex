@@ -1,1 +1,4 @@
-Abstract here.
+A key feature of modern CPS is the complexity of layers in a system.  Unlike traditional software development, where the device layer is essentially completely abstracted away by the operating system, CPS design often includes substantial efforts spanning the range from low-level actuators sensors, and data storage to user control systems or high-level autonomy.  Unfortunately, even when advanced testing or verification methods are applied to low level system aspects, those efforts are separated from high-level tests of the user-centric aspects of a CPS, which are often produced by a different team, and do not stress the low-level system.  Effective automated test composition
+would make it possible to automatically produce integration/system tests for
+CPS and other embedded systems, even with extremely heterogenous aspects, where the individual elements have
+effective tests but the interactions between the sub-systems are untested.  Because of the size of the search space involved and the complexity of modeling and designing CPS, we also propose in the long term a move towards system architectures to support testing across system levels.

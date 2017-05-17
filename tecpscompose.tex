@@ -35,7 +35,8 @@
 
 \begin{document}
 
-\title{One Test to Rule Them All}
+\title{Towards Automated Composition of Heterogenous Tests for
+  Cyber-Physical Systems}
 %\title{Normalizing and Generalizing Test Cases}
 
 \author{Alex Groce}
@@ -48,6 +49,11 @@
 \affiliation{
 \institution{School of Informatics, Computing, and Cyber Systems, 
   Northern Arizona University}}
+\email{}
+
+\author{Josie Holmes}
+\affiliation{
+\institution{Pennsylvania State University}}
 \email{}
 
 %\numberofauthors{3}
@@ -118,17 +124,25 @@ Arpit Christi, Matthew Lyle Olson, Mohammad Amin Alipour, Alex Groce\\
 }
 }
 
-
 \begin{CCSXML}
+<ccs2012>
 <ccs2012>
 <concept_id>10011007.10011074.10011099.10011102.10011103</concept_id>
 <concept_desc>Software and its engineering~Software testing and debugging</concept_desc>
 <concept_significance>500</concept_significance>
 </concept>
 </ccs2012>
+ <concept>
+  <concept_id>10010520.10010553.10010562</concept_id>
+  <concept_desc>Computer systems organization~Embedded systems</concept_desc>
+  <concept_significance>500</concept_significance>
+ </concept>
+</ccs2012>  
 \end{CCSXML}
 
-\ccsdesc[500]{Software and its engineering~Software testing and debugging}
+\ccsdesc[500]{Software and its engineering~Software testing and
+  debugging}
+\ccsdesc[500]{Computer systems organization~Embedded systems}
 
 \keywords{test case reduction, semantic simplification, fuzzer taming}
 
@@ -136,9 +150,10 @@ Arpit Christi, Matthew Lyle Olson, Mohammad Amin Alipour, Alex Groce\\
 
 \input{intro}
 
-\input{formal}
+\input{compose}
+%\input{formal}
 
-\input{casestudies}
+%\input{casestudies}
 
 \input{related}
 

@@ -1,4 +1,4 @@
-tecpscompose.pdf: tecpscompose.tex intro.tex bibliography.bib casestudies.tex related.tex abstract.tex conclusions.tex formal.tex
+tecpscompose.pdf: tecpscompose.tex intro.tex bibliography.bib abstract.tex compose.tex related.tex
 	pdflatex tecpscompose.tex
 	bibtex tecpscompose
 	pdflatex tecpscompose.tex
