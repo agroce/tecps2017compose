@@ -189,7 +189,7 @@ removed without the test no longer failing.
 Cause reduction \cite{icst2014,stvrcausereduce} modifies
 delta-debugging to reduce tests with respect to an arbitrary property
 of the test, not just failure.  For example to produce very fast
-regression tests (called “quick tests”), automated tests can be
+regression tests (called ``quick tests''), automated tests can be
 minimized to find smaller tests that retain full code coverage.  In
 past work, this approach produced highly efficient tests for
 real-world systems such as Mozilla's SpiderMonkey JavaScript engine
@@ -301,7 +301,11 @@ many search-based techniques expect access to branch distances and
 other intrusive instrumentation.  This may not be feasible for
 embedded systems; we can use cause reduction with instrumentation only
 for user-centric code or, in the worst case, for neither system.  This
-necessitates guidance by other means (and in the long run motivates the need for an architecture to provide more guidance to the search for compositions).
+necessitates guidance by other means.
+
+\section{An Architecture for Testable Cyberphysical Systems}
+
+One such means, though less well-defined at this point, is a means for expressing, via software architectural methods, the connections between domains at varying levels of abstraction.  In addition to supporting test composition (by, e.g., making explicit constraints such as those that the catalog imposes, mapped to a lower-level of abstraction), this approach would ideally enable effective testing of layers in combination with architectural models, in addition to concrete implementations.  Because complex CPS require thorough testing, given their connection to the physical world, we also aim to devise methods to generally improve testability by architectural means. 
 
 \mycomment{
 The sketch of a composition approach here is, of course, highly
