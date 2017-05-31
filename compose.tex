@@ -4,16 +4,18 @@ particularly for the safety-critical system, extensive and useful;
 however, they typically fail to cover the interaction of the systems
 in any way.  In addition to the basic problem that the interactions
 are not explored in existing tests, however, is a deeper problem:
-tests do not compose.  Even within a single system, executing test A
-followed by test B seldom produces the desired union of behaviors
-(e.g., even covering all code covered by A or B).  The actions of A
-often interfere with those of B (or vice versa): that is, some action
-in A is either illegal in a composed context, causing B (and thus the
+tests do not compose.  Even within a single system, executing test
+{\tt A}
+followed by test {\tt B} seldom produces the desired union of behaviors
+(e.g., even covering all code covered by {\tt A} or {\tt B}).  The
+actions of {\tt A}
+often interfere with those of {\tt B} (or vice versa): that is, some action
+in {\tt A} is either illegal in a composed context, causing {\tt B} (and thus the
 entire test) to become invalid, or
-disables some behavior of B, lowering test effectiveness.  The
-ordering of test operations also matters: e.g., some actions in A must be
-before some actions in B to produce interaction, while other actions
-must be after B action.  \mycomment{Providing a way to allow for
+disables some behavior of {\tt B}, lowering test effectiveness.  The
+ordering of test operations also matters: e.g., some actions in {\tt A} must be
+before some actions in {\tt B} to produce interaction, while other actions
+must be after some {\tt B} action.  \mycomment{Providing a way to allow for
 greater composition of any set of tests, whether for a single system,
 or multiple systems, would greatly enhance the utility of existing
 tests produced either by human effort or by formal/automated testing
@@ -201,12 +203,13 @@ test or one with certain coverage.  However, this is not necessary.
 Given a test that does not fail (or provide some other useful property
 of a test), cause reduction/delta-debugging defines a search, based on
 removal of components, for a test that does meet the criteria.  We
-propose to construct “base” compositions of tests that do not provide
-useful testing, and use cause reduction to search for a test that does
+propose to construct ``base'' compositions of tests (that do not provide
+useful testing), and then use cause reduction to search for a test that \emph{does}
 provide useful composition of the tests.  The search has a potential
 to succeed because in most cases the reason composition fails is
 interference, which can be avoided by removing the interfering parts
-of a test, leaving a good interleaving of test actions.
+of a test, leaving a good interleaving of test actions, made possible
+by the $k$ repetitions in the base.
 
 A concrete application of our approach to the NASA Mars rover file
 system testing would work as follows.  First, construct the test {\tt
@@ -218,11 +221,11 @@ determines the cost of cause reduction.  The multiple copies of {\tt
 combined with cause reduction.  If $k$ is at least one more than the
 max of the lengths of {\tt A} and {\tt B}, then there is a possibility
 (though not a guarantee) for cause reduction to produce any needed
-interleaving of actions: removing all but the needed action from each
+interleaving of actions: removing all but the needed actions from each
 copy yields all interleavings of a single copy of {\tt A} and {\tt B}.
 The extra copy is required so that the interleaving can start with
 either of {\tt A} or {\tt B}.  After constructing the initial, but
-usually not successful, “composition” {\tt (A+B)}$\times k$, our
+usually not successful, ``composition'' {\tt (A+B)}$\times k$, our
 approach applies cause reduction to {\tt (A+B)}$\times k$, searching
 for a test that: 1) does not violate catalog invariants, so is a valid
 test, since a core problem of composition is the creation of invalid
