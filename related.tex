@@ -1,6 +1,6 @@
 \section{Related Work}
 
-There has been previous work on architectures for cyber-physical systems (e.g., that of Tan et al. \cite{tan2008prototype}) but this has largely focused on articulating the definition of a CPS and what distinguishes it from a traditional embedded system, to some extent.  The work of Sokolsky et. al does aim for increased reliability via modeling and code generation \cite{sokolsky2014architecture}, but to our knowledge no previous work has focused on testing and testability concerns.  We believe that while synthesis from models is a worthy goal, in the short term much CPS development will involve human-crafted implementations, with models used to help design these, rather than as the only platform, making support for \emph{testing} rather than just model verification, essential.
+There has been previous work on architectures for cyber-physical systems (e.g., that of Tan et al. \cite{tan2008prototype}) but this has largely focused on articulating the definition of a CPS and what distinguishes it from a traditional embedded system, to some extent.  The work of Sokolsky et. al does aim for increased reliability via modeling and code generation \cite{sokolsky2014architecture}, but to our knowledge no previous work has focused on testing and testability concerns.  We believe that while synthesis from models is a worthy goal, in the short term much CPS development will involve human-crafted implementations, with models used to help design these, rather than as the only platform, making support for \emph{testing} essential.
 
 The idea of algorithms that operate on tests, as such, is
 primarily represented in the literature by the work on
@@ -8,8 +8,7 @@ delta-debugging or test reduction in general:
 \cite{DD,HDD,TCminim,MinUnit,CReduce,Lithium,DDISSTA,IsolThread,Yesterday}.  Pike proposed a limited test
 generalization that applies to tests that consist of Haskell data
 values \cite{SmartCheck}; Sai proposed a very limited, ad hoc
-version of semantic minimization that lacks the goal of normalization,
- \cite{SaiSimple}, and Groce et al. proposed a more complete normalization \cite{OneTest}.  Work on automatically producing readable tests \cite{Readable} is also
-related, in that it aims to ``simplify'' tests.  Test case
+version of semantic minimization,
+ \cite{SaiSimple}, and Groce et al. proposed a more complete normalization \cite{OneTest}.  Work on automatically producing readable tests \cite{Readable} aims to ``simplify'' tests.  Test case
 purification \cite{PureTest} is a kind of limited (in approach and in
 goal) decomposition.  To our knowledge, there is no existing work on composing tests at heterogeneous layers of of system, CPS or otherwise.
